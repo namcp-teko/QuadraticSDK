@@ -20,36 +20,26 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep public class vn.android.southern.quadratic_solution.** { *; }
+-keep class vn.android.southern.quadratic_solution.** { *; }
 
-# generic rules for library
--keepparameternames
--renamesourcefileattribute SourceFile
--keepattributes Exceptions,InnerClasses,Signature,Deprecated,
-                SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
+-keep public class * extends android.app.Activity
+-keep public class * extends androidx.fragment.app.Fragment
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
 
--keep public class * {
-    public protected *;
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+    public void set*(...);
 }
 
--keepclasseswithmembernames,includedescriptorclasses class * {
+
+-keepclassmembers enum * {
+    public *;
+}
+
+-keepclasseswithmembernames class * {
     native <methods>;
 }
-
--keepclassmembers,allowoptimization enum * {
-    public static **[] values();
-    public static ** valueOf(java.lang.String);
-}
-
--keepclassmembers class * implements java.io.Serializable {
-    static final long serialVersionUID;
-    private static final java.io.ObjectStreamField[] serialPersistentFields;
-    private void writeObject(java.io.ObjectOutputStream);
-    private void readObject(java.io.ObjectInputStream);
-    java.lang.Object writeReplace();
-    java.lang.Object readResolve();
-}
-
-# keep Kotlin metadata
--keep class kotlin.Metadata { *; }
--keepattributes RuntimeVisibleAnnotations
