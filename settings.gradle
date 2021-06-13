@@ -1,0 +1,3 @@
+rootProject.name = "FirstSDK"
+include ':app'
+include ':quadratic-solution'
