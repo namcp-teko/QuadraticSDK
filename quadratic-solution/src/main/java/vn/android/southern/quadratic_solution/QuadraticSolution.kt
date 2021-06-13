@@ -1,7 +1,7 @@
 package vn.android.southern.quadratic_solution
 
 import vn.android.southern.quadratic_solution.exception.SolutionException
-import vn.android.southern.quadratic_solution.extension.Result
+import vn.android.southern.quadratic_solution.utils.Result
 import kotlin.math.sqrt
 
 class QuadraticSolution {
