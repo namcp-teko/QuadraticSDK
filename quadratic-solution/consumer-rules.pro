@@ -1,4 +1,4 @@
-
+-keepnames class vn.android.southern.quadratic_solution.* { *; }
 
 -keep public class * extends android.view.View {
     public <init>(android.content.Context);
@@ -7,7 +7,7 @@
     public void set*(...);
 }
 
--keepclassmembernames public class * {
+-keepnames public class * {
     public protected *;
 }
 
@@ -15,6 +15,6 @@
     public *;
 }
 
--keepclasseswithmembernames class * {
+-keepnames class * {
     public <methods>;
 }
