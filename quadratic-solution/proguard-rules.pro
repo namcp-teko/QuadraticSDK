@@ -32,8 +32,8 @@
     public protected *;
 }
 
--keepclasseswithmembernames,includedescriptorclasses class * {
-    native <methods>;
+-keepclasseswithmembernames class * {
+    public <methods>;
 }
 
 -keepclassmembers,allowoptimization enum * {
