@@ -7,10 +7,6 @@
 
 -keepattributes *Annotation*
 
--keep public class * {
-    public protected *;
-}
-
 -keepclassmembers enum * {
     public *;
 }
