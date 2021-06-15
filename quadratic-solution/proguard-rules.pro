@@ -20,17 +20,19 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keepclassmembernames public class * {
+-keep class vn.android.southern.quadratic_solution.** { *; }
+
+-keep public class * {
     public protected *;
+}
+
+-keepclasseswithmembernames,includedescriptorclasses class * {
+    native <methods>;
 }
 
 # generic rules for library
 -keepparameternames
 -keepattributes Exceptions,*Annotation*
-
--keepclasseswithmembernames class * {
-    public <methods>;
-}
 
 -keepclassmembers,allowoptimization enum * {
     public static **[] values();
@@ -45,7 +47,3 @@
     java.lang.Object writeReplace();
     java.lang.Object readResolve();
 }
-
-# keep Kotlin metadata
--keep class kotlin.Metadata { *; }
--keepattributes RuntimeVisibleAnnotations

@@ -4,6 +4,8 @@
     public protected *;
 }
 
+-keepattributes Exceptions,*Annotation*
+
 -keepclasseswithmembernames,includedescriptorclasses class * {
     native <methods>;
 }
