@@ -1,10 +1,9 @@
--dontusemixedcaseclassnames
--keepclassmembernames class vn.android.southern.quadratic_solution.** { *; }
+-keep class vn.android.southern.quadratic_solution.** { *; }
 
--keepnames public class * {
+-keep public class * {
     public protected *;
 }
 
--keepclasseswithmembernames class * {
+-keepclasseswithmembernames,includedescriptorclasses class * {
     native <methods>;
 }
