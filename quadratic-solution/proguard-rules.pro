@@ -20,15 +20,9 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep public class vn.android.southern.quadratic_solution.** { *; }
-
 # generic rules for library
 -keepparameternames
 -keepattributes Exceptions,*Annotation*
-
--keep public class * {
-    public protected *;
-}
 
 -keepclasseswithmembernames class * {
     public <methods>;
